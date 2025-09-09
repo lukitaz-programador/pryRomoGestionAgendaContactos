@@ -31,7 +31,7 @@ public partial class frmPrincipal : Form
     }
     private void mtbNumero_TextChanged(object sender, EventArgs e)
     {
-        if (mtbNumero.MaskFull == true)
+        if (mtbNumero.MaskFull == true) 
         {
             btnRegistrar.Enabled = true;
         }
@@ -47,11 +47,11 @@ public partial class frmPrincipal : Form
         vecContacto[indice] = txtContacto.Text;
         vecTelefono[indice] = mtbNumero.Text;
         lsbRegistros.Items.Add("Contacto: " + vecContacto[indice] + " Teléfono: " + vecTelefono[indice]);
-        vContador = vContador + 1;
+        vContador++;
         lblContador.Text = Convert.ToString(vContador);
         txtContacto.Text = "";
         mtbNumero.Text = "";
-        indice = indice + 1;
+        indice ++;
         txtContacto.Focus();
     }
 

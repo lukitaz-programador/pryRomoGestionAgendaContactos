@@ -147,10 +147,11 @@
             // lblContador
             // 
             lblContador.AutoSize = true;
-            lblContador.Location = new Point(141, 149);
+            lblContador.Location = new Point(133, 150);
             lblContador.Name = "lblContador";
-            lblContador.Size = new Size(0, 15);
+            lblContador.Size = new Size(13, 15);
             lblContador.TabIndex = 2;
+            lblContador.Text = "0";
             // 
             // lblCantidad
             // 
@@ -165,9 +166,9 @@
             grbCargados.Controls.Add(lsbRegistros);
             grbCargados.Controls.Add(lblContadorr);
             grbCargados.Controls.Add(lblContador);
-            grbCargados.Location = new Point(25, 205);
+            grbCargados.Location = new Point(25, 197);
             grbCargados.Name = "grbCargados";
-            grbCargados.Size = new Size(350, 172);
+            grbCargados.Size = new Size(350, 175);
             grbCargados.TabIndex = 4;
             grbCargados.TabStop = false;
             grbCargados.Text = "Contactos cargados";
@@ -176,7 +177,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(392, 404);
+            ClientSize = new Size(392, 388);
             Controls.Add(grbCargados);
             Controls.Add(lblCantidad);
             Controls.Add(grbDatos);
