@@ -41,6 +41,7 @@
             lblContador = new Label();
             lblCantidad = new Label();
             grbCargados = new GroupBox();
+            btnVerContactos = new Button();
             grbDatos.SuspendLayout();
             grbCargados.SuspendLayout();
             SuspendLayout();
@@ -90,9 +91,9 @@
             // 
             btnRegistrar.Enabled = false;
             btnRegistrar.Font = new Font("Segoe UI", 10F);
-            btnRegistrar.Location = new Point(235, 123);
+            btnRegistrar.Location = new Point(223, 122);
             btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(86, 29);
+            btnRegistrar.Size = new Size(98, 29);
             btnRegistrar.TabIndex = 4;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
@@ -101,9 +102,9 @@
             // btnCancelar
             // 
             btnCancelar.Font = new Font("Segoe UI", 10F);
-            btnCancelar.Location = new Point(143, 123);
+            btnCancelar.Location = new Point(119, 122);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(86, 29);
+            btnCancelar.Size = new Size(98, 29);
             btnCancelar.TabIndex = 5;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -138,7 +139,7 @@
             // lblContadorr
             // 
             lblContadorr.AutoSize = true;
-            lblContadorr.Location = new Point(6, 149);
+            lblContadorr.Location = new Point(6, 163);
             lblContadorr.Name = "lblContadorr";
             lblContadorr.Size = new Size(129, 15);
             lblContadorr.TabIndex = 1;
@@ -147,7 +148,7 @@
             // lblContador
             // 
             lblContador.AutoSize = true;
-            lblContador.Location = new Point(133, 150);
+            lblContador.Location = new Point(133, 163);
             lblContador.Name = "lblContador";
             lblContador.Size = new Size(13, 15);
             lblContador.TabIndex = 2;
@@ -163,21 +164,32 @@
             // 
             // grbCargados
             // 
+            grbCargados.Controls.Add(btnVerContactos);
             grbCargados.Controls.Add(lsbRegistros);
             grbCargados.Controls.Add(lblContadorr);
             grbCargados.Controls.Add(lblContador);
             grbCargados.Location = new Point(25, 197);
             grbCargados.Name = "grbCargados";
-            grbCargados.Size = new Size(350, 175);
+            grbCargados.Size = new Size(350, 194);
             grbCargados.TabIndex = 4;
             grbCargados.TabStop = false;
             grbCargados.Text = "Contactos cargados";
+            // 
+            // btnVerContactos
+            // 
+            btnVerContactos.Location = new Point(223, 155);
+            btnVerContactos.Name = "btnVerContactos";
+            btnVerContactos.Size = new Size(98, 29);
+            btnVerContactos.TabIndex = 3;
+            btnVerContactos.Text = "Ver Contactos";
+            btnVerContactos.UseVisualStyleBackColor = true;
+            btnVerContactos.Click += button1_Click;
             // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(392, 388);
+            ClientSize = new Size(392, 403);
             Controls.Add(grbCargados);
             Controls.Add(lblCantidad);
             Controls.Add(grbDatos);
@@ -208,5 +220,6 @@
         private Label lblContador;
         private Label lblCantidad;
         private GroupBox grbCargados;
+        private Button btnVerContactos;
     }
 }

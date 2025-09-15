@@ -31,6 +31,7 @@
             lblContacto = new Label();
             btnAtras = new Button();
             btnSiguiente = new Button();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             SuspendLayout();
             // 
             // lblContacto
@@ -64,7 +65,7 @@
             btnSiguiente.TabIndex = 2;
             btnSiguiente.Text = "Siguiente";
             btnSiguiente.UseVisualStyleBackColor = true;
-            btnSiguiente.Click += btnSiguiente_Click;
+            btnSiguiente.Click += btnSiguiente_Click; 
             // 
             // frmMuestra
             // 
@@ -76,6 +77,7 @@
             Controls.Add(lblContacto);
             Name = "frmMuestra";
             Text = "Muestra de Contactos";
+            Load += frmMuestra_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -85,5 +87,6 @@
         private Label lblContacto;
         private Button btnAtras;
         private Button btnSiguiente;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

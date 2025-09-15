@@ -17,39 +17,58 @@ namespace pryRomoGestionAgendaContactos
             InitializeComponent();
         }
 
-        string[] vecContacto = new string[5];
+        string[] vecContacto = new string[3];
         int indice;
 
-        private void lblContacto_Click(object sender, EventArgs e)
+        private void frmMuestra_Load(object sender, EventArgs e)
         {
             vecContacto[0] = "Lucas";
             vecContacto[1] = "Mati";
             vecContacto[2] = "Pablo";
-            vecContacto[3] = "Valen";
-            vecContacto[4] = "Benja";
+            indice = 0;
+            lblContacto.Text=vecContacto[indice];
+        }
 
-            lblContacto.Text = "";
-            indice = -1;
+        private void lblContacto_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            if (indice == -1)
+            indice--;
+            lblContacto.Text = vecContacto[indice];
+
+            if (indice != 0)
             {
-                lblContacto.Text = "";
+                btnAtras.Enabled = true;
+            }
+            else if (indice == 0)
+            {
                 btnAtras.Enabled = false;
             }
+            else if (indice+1 == vecContacto.Length)
+            {
+                btnSiguiente.Enabled = false;
+            }
+
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
-        {
-            if(vecContacto.Length==indice-1)
+        { 
+            indice++;
+            lblContacto.Text = vecContacto[indice];
+            if (indice != 0)
             {
-                indice++;
-                if (vecContacto.Length == indice - 1)
-                {
-                    btnSiguiente.Enabled = false;
-                }
+                btnAtras.Enabled = true;
+            }
+            else if (indice == 0)
+            {
+                btnAtras.Enabled = false;
+            }
+            else if (indice+1== vecContacto.Length)
+            {
+                btnSiguiente.Enabled = false;
             }
         }
     }

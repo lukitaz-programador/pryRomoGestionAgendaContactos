@@ -31,7 +31,7 @@ public partial class frmPrincipal : Form
     }
     private void mtbNumero_TextChanged(object sender, EventArgs e)
     {
-        if (mtbNumero.MaskFull == true) 
+        if (mtbNumero.MaskFull == true)
         {
             btnRegistrar.Enabled = true;
         }
@@ -51,7 +51,7 @@ public partial class frmPrincipal : Form
         lblContador.Text = Convert.ToString(vContador);
         txtContacto.Text = "";
         mtbNumero.Text = "";
-        indice ++;
+        indice++;
         txtContacto.Focus();
     }
 
@@ -62,6 +62,11 @@ public partial class frmPrincipal : Form
     }
 
     private void lsbRegistros_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void button1_Click(object sender, EventArgs e)
     {
 
     }
