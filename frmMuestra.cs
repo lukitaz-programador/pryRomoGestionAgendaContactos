@@ -17,16 +17,13 @@ namespace pryRomoGestionAgendaContactos
             InitializeComponent();
         }
 
-        string[] vecContacto = new string[3];
         int indice;
 
         private void frmMuestra_Load(object sender, EventArgs e)
         {
-            vecContacto[0] = "Lucas";
-            vecContacto[1] = "Mati";
-            vecContacto[2] = "Pablo";
             indice = 0;
-            lblContacto.Text=vecContacto[indice];
+            lblContacto.Text = frmPrincipal.vecContactos[indice];
+            lblNumero.Text = "Primer contacto";
         }
 
         private void lblContacto_Click(object sender, EventArgs e)
@@ -37,38 +34,104 @@ namespace pryRomoGestionAgendaContactos
         private void btnAtras_Click(object sender, EventArgs e)
         {
             indice--;
-            lblContacto.Text = vecContacto[indice];
+            lblContacto.Text = frmPrincipal.vecContactos[indice];
+
+            if (frmPrincipal.vecContactos[indice] == null)
+            {
+                lblContacto.Text = "No hay contacto guardado";
+            }
+                
+            switch (indice)
+            {
+                case 0:
+                    lblNumero.Text = "Primer contacto";
+                    break;
+
+                case 1:
+                    lblNumero.Text = "Segundo contacto";
+                    break;
+
+                case 2:
+                    lblNumero.Text = "Tercer contacto";
+                    break;
+
+                case 3:
+                    lblNumero.Text = "Cuarto contacto";
+                    break;
+
+                case 4:
+                    lblNumero.Text = "Quinto contacto";
+                    break;
+            }
 
             if (indice != 0)
             {
                 btnAtras.Enabled = true;
             }
-            else if (indice == 0)
+            if (indice == 0)
             {
                 btnAtras.Enabled = false;
             }
-            else if (indice+1 == vecContacto.Length)
+
+            if (indice+1 == frmPrincipal.vecContactos.Length)
             {
                 btnSiguiente.Enabled = false;
             }
-
+            else
+            {
+                btnSiguiente.Enabled = true;
+            }
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         { 
             indice++;
-            lblContacto.Text = vecContacto[indice];
+            lblContacto.Text = frmPrincipal.vecContactos[indice];
+
+            if (frmPrincipal.vecContactos[indice] == null)
+            {
+                lblContacto.Text = "No hay contacto guardado";
+            }
+
+            switch (indice)
+            {
+                case 0:
+                    lblNumero.Text = "Primer contacto";
+                    break;
+
+                case 1:
+                    lblNumero.Text = "Segundo contacto";
+                    break;
+
+                case 2:
+                    lblNumero.Text = "Tercer contacto";
+                    break;
+
+                case 3:
+                    lblNumero.Text = "Cuarto contacto";
+                    break;
+
+                case 4:
+                    lblNumero.Text = "Quinto contacto";
+                    break;
+            }
+
             if (indice != 0)
             {
                 btnAtras.Enabled = true;
             }
-            else if (indice == 0)
+            if (indice == 0)
             {
                 btnAtras.Enabled = false;
             }
-            else if (indice+1== vecContacto.Length)
+
+            if (indice + 1 == frmPrincipal.vecContactos.Length)
             {
                 btnSiguiente.Enabled = false;
+            }
+            else
+            {
+                btnSiguiente.Enabled = true;
             }
         }
     }

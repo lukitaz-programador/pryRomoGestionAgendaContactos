@@ -7,6 +7,7 @@ public partial class frmPrincipal : Form
     }
 
     //Declaración de las variables globales
+    public static string[] vecContactos = new string[5];
     string[] vecTelefono = new string[5];
     string[] vecContacto = new string[5];
     int indice;
@@ -51,6 +52,7 @@ public partial class frmPrincipal : Form
         lblContador.Text = Convert.ToString(vContador);
         txtContacto.Text = "";
         mtbNumero.Text = "";
+        vecContactos[indice] = vecContactos[indice] + vecTelefono[indice];
         indice++;
         txtContacto.Focus();
     }
@@ -68,6 +70,8 @@ public partial class frmPrincipal : Form
 
     private void button1_Click(object sender, EventArgs e)
     {
-
+        frmMuestra frmMuestra = new frmMuestra();
+        Hide();
+        frmMuestra.ShowDialog();
     }
 }
