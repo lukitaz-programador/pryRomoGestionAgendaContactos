@@ -1,17 +1,26 @@
 namespace pryRomoGestionAgendaContactos;
 public partial class frmPrincipal : Form
 {
+    public static string[] vecExportado=new string[5];
+
     public frmPrincipal()
     {
         InitializeComponent();
     }
 
-    //DeclaraciÛn de las variables globales
+
+    //Declaraci√≥n de las variables globales
     public static string[] vecContactos = new string[5];
     string[] vecTelefono = new string[5];
     string[] vecContacto = new string[5];
     int indice;
     int vContador = 0;
+    //Definci√≥n de variables globales
+    string[] vecTelefono = new string[5];
+    string[] vecContacto = new string[5];
+    int vContador = 0;
+    int indice;
+
 
     //Campos
     private void txtContacto_TextChanged(object sender, EventArgs e)
@@ -26,12 +35,17 @@ public partial class frmPrincipal : Form
         }
     }
 
+
     private void mtbNumero_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
     {
 
     }
     private void mtbNumero_TextChanged(object sender, EventArgs e)
     {
+
+    private void mtbNumero_TextChanged(object sender, EventArgs e)
+    {
+
         if (mtbNumero.MaskFull == true)
         {
             btnRegistrar.Enabled = true;
@@ -47,12 +61,16 @@ public partial class frmPrincipal : Form
     {
         vecContacto[indice] = txtContacto.Text;
         vecTelefono[indice] = mtbNumero.Text;
-        lsbRegistros.Items.Add("Contacto: " + vecContacto[indice] + " TelÈfono: " + vecTelefono[indice]);
+        lsbRegistros.Items.Add("Contacto: " + vecContacto[indice] + " Tel√©fono: " + vecTelefono[indice]);
         vContador++;
         lblContador.Text = Convert.ToString(vContador);
         txtContacto.Text = "";
         mtbNumero.Text = "";
+
         vecContactos[indice] = vecContactos[indice] + vecTelefono[indice];
+
+        vecExportado[indice]=vecContacto[indice]+vecTelefono[indice];
+
         indice++;
         txtContacto.Focus();
     }
@@ -70,7 +88,11 @@ public partial class frmPrincipal : Form
 
     private void button1_Click(object sender, EventArgs e)
     {
+
         frmMuestra frmMuestra = new frmMuestra();
+
+        frmMuestra frmMuestra= new frmMuestra();
+
         Hide();
         frmMuestra.ShowDialog();
     }
