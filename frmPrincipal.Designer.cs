@@ -84,6 +84,7 @@
             mtbNumero.Name = "mtbNumero";
             mtbNumero.Size = new Size(217, 29);
             mtbNumero.TabIndex = 2;
+            mtbNumero.MaskInputRejected += mtbNumero_MaskInputRejected;
             mtbNumero.TextChanged += mtbNumero_TextChanged;
             // 
             // btnRegistrar
